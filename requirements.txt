@@ -1,0 +1,4 @@
+requests
+docker
+six
+confuse

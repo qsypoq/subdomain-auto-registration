@@ -1,0 +1,3 @@
+username: "my_username"
+api_key: "my_api_key"
+whitelisted_ip: "my_whitelisted_ip"
