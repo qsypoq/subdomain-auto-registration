@@ -20,4 +20,4 @@ for event in events:
         external_ip = env.split("=", 1)[-1]
     if fqdn_list and registrar and external_ip:
       for fqdn in fqdn_list:
-        os.system(f"cd /usr/src/app && python register.py {fqdn} {registrar} {external_ip}")
+        os.system(f"cd /usr/src/app && python register.py {fqdn.strip()} {registrar} {external_ip}")
