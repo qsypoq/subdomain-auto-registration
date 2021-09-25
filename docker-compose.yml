@@ -6,6 +6,7 @@ services:
     restart: unless-stopped
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./conf:/usr/src/app/conf:ro
 
 networks:
    default:
