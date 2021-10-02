@@ -1,1 +1,0 @@
-docker build . -t registry.magnier.io/qsypoq/subdomain-auto-registration:latest && docker push registry.magnier.io/qsypoq/subdomain-auto-registration:latest

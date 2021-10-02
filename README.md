@@ -9,7 +9,7 @@ Example with namecheap:
 
 - Set your conf/namecheap.yml
 
-```
+```yaml
 username: "my_username"
 api_key: "my_api_key"
 whitelisted_ip: "my_whitelisted_ip"
@@ -19,7 +19,7 @@ whitelisted_ip: "my_whitelisted_ip"
 
 - Add environment variables to your docker-compose file
 
-```
+```yaml
 version: '3.1'
 
 services:
@@ -42,10 +42,28 @@ networks:
      external:
        name: nginx-proxy
 ```
+- Setup the listener
+
+```yaml
+version: '3.1'
+services:
+  subdomain-registrer:
+    image: qsypoq/subdomain-auto-registration:latest
+    container_name: subdomain-registrer
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./conf:/usr/src/app/conf:ro
+
+networks:
+   default:
+     external:
+       name: nginx-proxy
+```
 
 ### Start the listener
 
-```
+```bash
 docker-compose up -d
 ```
 

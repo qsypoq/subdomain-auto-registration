@@ -1,7 +1,7 @@
 version: '3.1'
 services:
   subdomain-registrer:
-    image: registry.magnier.io/qsypoq/subdomain-auto-registration:latest
+    image: qsypoq/subdomain-auto-registration:latest
     container_name: subdomain-registrer
     restart: unless-stopped
     volumes:
